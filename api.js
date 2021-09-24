@@ -13,7 +13,7 @@ async function TotalLanguages (){
     });
     console.log(`${totalLanguages.length} languages are there in the countries API`); 
     }
-TotalLanguages();
+// TotalLanguages();
 
 async function MostSpokenLanguages (){
     var lang=[]
@@ -22,9 +22,9 @@ async function MostSpokenLanguages (){
     result.forEach(country => {
         country.languages.forEach(item => {
           const find=lang.findIndex(data => data.name ===item.name)
-          if(lang.length === 0){
-              lang.push({name:item.name,count:1})
-          }
+        //   if(lang.length === 0){
+        //       lang.push({name:item.name,count:1})
+        //   }
           if(find === -1){
             lang.push({name:item.name,count:1})
           }else{
@@ -39,7 +39,7 @@ async function MostSpokenLanguages (){
     });
     console.log(data);
     }
-MostSpokenLanguages();
+// MostSpokenLanguages();
 
 async function largestArea (){
    let topTen=[]
@@ -55,4 +55,4 @@ async function largestArea (){
     })
     console.log(topTen);
     }
-// largestArea();
+largestArea();
